@@ -78,18 +78,13 @@ def check_alerts(alerts, price):
 def main():
     print("Carregando alertas...")
     alerts = load_alerts()
-    print(f"{len(alerts)} alertas carregados. Checando a cada {CHECK_INTERVAL}s.")
-    while True:
-        try:
-            price = get_btc_price_usd()
-            print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] BTC = {price} USD")
-            changed = check_alerts(alerts, price)
-            if changed:
-                save_alerts(alerts)
-        except Exception as err:
-            print("Erro (ignorando):", err)
-        time.sleep(CHECK_INTERVAL)
+    price = get_btc_price_usd()
+    print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] BTC = {price} USD")
+    changed = check_alerts(alerts, price)
+    if changed:
+        save_alerts(alerts)
 
 if __name__ == "__main__":
     main()
+
 
