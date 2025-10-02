@@ -1,5 +1,9 @@
 name: BTC Alert
 
+env:
+  TOKEN: ${{ secrets.TOKEN }}
+  CHAT_ID: ${{ secrets.CHAT_ID }}
+
 on:
   schedule:
     - cron: '0,15,30,45 * * * *'
