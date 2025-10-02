@@ -2,7 +2,7 @@
 
 Bot simples para alertas de preço de Bitcoin. Observa o preço e envia notificações quando um alerta configurado é disparado.
 
-- [English Version](README_english.md)
+📄 [English Version](README_english.md)
 
 ## 🚀 Funcionalidades
 
@@ -40,9 +40,7 @@ Vá em Settings → Secrets and variables → Actions → New repository secret 
 ### 3. Aguardar
 
 - O workflow roda automaticamente a cada 15 minutos.
-
 - Alertas chegarão no Telegram quando o preço atingir ou ultrapassar o valor configurado.
-
 - Também é possível rodar manualmente em Actions → BTC Alert → Run workflow.
 
 ## ⚠ Editando os alertas (alert.json)
@@ -69,9 +67,7 @@ O arquivo alert.json define os alertas de preço do BTC. Cada alerta possui:
 
 ```
 - Altere o price para definir o valor que deseja monitorar.
-
 - Mude active para false se quiser desativar temporariamente o alerta.
-
 - Use once: true se o alerta deve disparar apenas uma vez.
 
 💡 Dica: Cada novo alerta precisa de um id único.
