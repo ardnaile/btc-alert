@@ -2,8 +2,8 @@ name: BTC Alert
 
 on:
   schedule:
-    - cron: '0,15,30,45 * * * *'  # a cada 15 minutos
-  workflow_dispatch: {}           # permite rodar manualmente
+    - cron: '0,15,30,45 * * * *'
+  workflow_dispatch: {}           
 
 jobs:
   run-bot:
@@ -20,4 +20,4 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run BTC Alert
-        run: python main.py
+        run: python btc_alert.py
