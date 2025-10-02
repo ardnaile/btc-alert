@@ -1,11 +1,12 @@
 import requests
 import time
 import json
+import os
 from pathlib import Path
 
 # --- CONFIG ---
-TOKEN = "TOKEN"
-CHAT_ID = "CHAT_ID"
+TOKEN = os.environ["TOKEN"]
+CHAT_ID = os.environ["CHAT_ID"]
 CHECK_INTERVAL = 30  # segundos entre checagens
 ALERTS_FILE = Path("alerts.json")
 COINGECKO_URL = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd"
@@ -86,5 +87,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
